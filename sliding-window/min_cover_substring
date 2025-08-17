@@ -1,0 +1,30 @@
+给你一个字符串 s 、一个字符串 t 。返回 s 中涵盖 t 所有字符的最小子串。如果 s 中不存在涵盖 t 所有字符的子串，则返回空字符串 "" 。
+
+
+class Solution {
+    public String minWindow(String s, String t) {
+        int[] hash = new int[128];
+        for(char ch: t.toCharArray()) hash[ch]--;
+
+        int len = s.length(), k = t.length();
+        String subStr = "";
+        int count = 0, minL = len + 1, subLeft = -1;
+
+        for(int i=0, j=0;j<len;j++){
+            char c = s.charAt(j);
+            if(hash[c]<0)count++;
+            hash[c]++;
+
+            while(i<j&&hash[s.charAt(i)]>0){
+                hash[s.charAt(i)]--;
+                i++;
+            }
+
+            if(count==k&&j-i+1<minL){
+                minL = j-i+1;
+                subLeft = i;
+            }
+        }
+        return subLeft>=0?s.substring(subLeft, subLeft+minL):"";
+    }
+}
