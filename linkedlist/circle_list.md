@@ -5,7 +5,7 @@
 如果链表中存在环 ，则返回 true 。 否则，返回 false 。
 
 快慢指针直接秒杀
-
+```
 /**
  * Definition for singly-linked list.
  * class ListNode {
@@ -29,3 +29,4 @@ public class Solution {
         return true;
     }
 }
+```
