@@ -1,7 +1,7 @@
 给你一个单链表的头节点 head ，请你判断该链表是否为回文链表。如果是，返回 true ；否则，返回 false 。
 
 通过快慢双指针，找到mid，将mid以后的节点翻转，然后从两头开始依次做判断
-
+```
 class Solution {
     public boolean isPalindrome(ListNode head) {
         if(head == null || head.next == null)return true;
@@ -33,3 +33,4 @@ class Solution {
         return prev;
     }
 }
+```
