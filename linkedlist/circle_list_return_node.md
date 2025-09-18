@@ -5,7 +5,7 @@
 解题思路：还是快慢指针先找有没有环，没找到就返回null；设置a=入环前的步数，b=环的长度
 技巧点在于，fast = 2 slow = slow + nb（能相遇是因为fast多走了整数圈） => slow = nb 如果slow想要到入口，需要走a + nb
 观察nb 和 a + nb 可以知道，其实再走a步，slow就可以达到入口节点，如何确定a呢？找一个新的从head出发的节点，和slow一起走，相遇的时候就是入口
-
+```
 /**
  * Definition for singly-linked list.
  * class ListNode {
@@ -34,3 +34,4 @@ public class Solution {
         return slow;
     }
 }
+```
