@@ -2,7 +2,7 @@
 
 用两个指针，prev和next，分别指明null和head，然后往后一路交换
 
-
+```
 class Solution {
     public ListNode reverseList(ListNode head) {
         ListNode prev = null, nxt = head;
@@ -16,3 +16,4 @@ class Solution {
         return prev;
     }
 }
+```
