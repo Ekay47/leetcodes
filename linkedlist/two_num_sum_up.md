@@ -6,7 +6,7 @@
 
 这题思路很简单，就是一位一位做模拟，但就是要注意的情况比较繁杂：两条链一样长？不一样长？结束的位置？val和cache更新一定要用临时变量，不然会出现经典的hazard
 
-
+```
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int cache = 0;
@@ -43,3 +43,4 @@ class Solution {
         return head;
     }
 }
+```
